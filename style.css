@@ -13,15 +13,16 @@ body{
 nav{
     display: flex;
     flex-direction: column;
+    align-items: center;
     height: 100vh;
-    width: 7.5rem;
+    width: 9rem;
     left: 0;
 }
-.about, .portfolio, .contact{
+.about, .projects, .contact{
     display: block;
     width: 5rem;
     height: 5rem;
-    margin: 4rem auto 4rem auto;
+    margin: 4rem 1rem 4rem 1rem;
     cursor: pointer;
 }
 .about{
@@ -29,7 +30,7 @@ nav{
     background-repeat: no-repeat;
     background-size: cover;
 }
-.portfolio{
+.projects{
     background: url(img/folder.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -44,11 +45,11 @@ section{
     flex-direction: column;
     background: #c3c3c3;
     box-sizing: border-box;
-    width: 80%;
+    width: 90%;
     height: 90%;
     border: 0.5rem #c3c3c3 solid;
     font-size: 1.7rem;
-    margin: 4rem auto 0 auto;
+    margin: 3rem 0 0 2vw;
 }
 .overflow{
     display: flex;
@@ -61,7 +62,7 @@ section{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 3rem;
+    height: 3.5rem;
     width: 100%;
     background: #000083;
     border-bottom: 0.5rem #c3c3c3 solid;
@@ -84,6 +85,9 @@ section{
     line-height: 3rem;
 }
 @media only screen and (max-width: 1000px) {
+    nav{
+        width: 6rem;
+    }
     section{
         width: 100%;
         height: 100%;
@@ -96,4 +100,8 @@ section{
         font-size: 1.6rem;
         line-height: 2rem;
     }
+  }
+
+  .none{
+      display: none;
   }

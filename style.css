@@ -6,6 +6,7 @@ body{
     background: #008081;
     font-family: 'Open Sans', sans-serif;
     height: 100vh;
+    width: 100vw;
     overflow: hidden;
     display: flex;
     flex-direction: row;
@@ -36,7 +37,7 @@ nav{
     background-size: cover;
 }
 .contact{
-    background: url(img/phone.png);
+    background: url(img/email.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -51,6 +52,9 @@ section{
     font-size: 1.7rem;
     margin: 3rem 0 0 2vw;
 }
+.aboutSection{
+    background: url(img/background.jpg);
+}
 .overflow{
     display: flex;
     flex-direction: column;
@@ -62,14 +66,71 @@ section{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 3.5rem;
+    height: 3.7rem;
     width: 100%;
     background: #000083;
     border-bottom: 0.5rem #c3c3c3 solid;
     color: white;
 }
+.deleteButton{
+    right: 0.5rem;
+    background: #bec0bb;
+    border: none;
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+    margin: 0 0.5rem 0 0;
+  }
+.deleteButton:after, .deleteButton:before{
+    content: "";
+    background: black;
+    height: 1.8rem;
+    width: 0.2rem;
+    display: inline-block;
+}
+.deleteButton:after{
+    transform: rotate(50deg);
+}
+.deleteButton:before{
+    transform: rotate(-50deg);
+}
+.url{
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    width: 100%;
+    background: #c3c3c3;
+    border-bottom: 0.2rem #c3c3c3 solid;
+}
+.inputUrl{
+    margin: 0 0 0 0.5%;
+    height: 100%;
+    width: 100%;
+    border: none;
+}
+.urlDiv{
+    display: flex;
+    align-items: center;
+    width: 90%;
+    height: 80%;
+    border: 0.1rem solid dimgray;
+    background: white;
+}
+.urlIcon{
+    width: 2rem;
+    height: 2rem;
+    margin: 0 0 0 0.5%;
+}
+.adress{
+    margin: 0 0 0 0.5%;
+}
 .titleTop{
     margin: 0 0 0 1rem;
+}
+.home{
+    width: 2.5rem;
+    height: 2.5rem;   
+    margin: 0 0 0 0.5%;
 }
 .title{
     width: 25%;
@@ -77,10 +138,10 @@ section{
 }
 .content{
     display: block;
-    width: 90%;
-    color: black;
+    width: 70%;
+    color: red;
     font-size: 2.5rem;
-    margin: 4vh auto 0 auto;
+    margin: 5vh auto 5vh auto;
     text-align: left;
     line-height: 3rem;
 }

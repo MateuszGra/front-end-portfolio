@@ -13,6 +13,7 @@ body{
 }
 .loader{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100vw;
@@ -20,12 +21,16 @@ body{
     position: absolute;
     z-index: 999;
     background: #008081;
-    animation: show 1s;
+    color: white;
+    font-size: 2rem;
 }
-
-@keyframes show {
-    0%   {opacity: 0;}
-    100% {opacity: 1;}
+.loaderImage{
+    margin: 0 0 1rem 0;
+    animation: rotate 2s infinite;
+}
+@keyframes rotate {
+    0%   {transform: rotate(-360)}
+    100%   {transform: rotate(360deg)}
   }
 nav{
     display: flex;

@@ -11,6 +11,13 @@ body{
     display: flex;
     flex-direction: row;
 }
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
 .loader{
     display: flex;
     flex-direction: column;
@@ -26,12 +33,7 @@ body{
 }
 .loaderImage{
     margin: 0 0 1rem 0;
-    animation: rotate 2s infinite;
 }
-@keyframes rotate {
-    0%   {transform: rotate(-360)}
-    100%   {transform: rotate(360deg)}
-  }
 nav{
     display: flex;
     flex-direction: column;
@@ -39,6 +41,7 @@ nav{
     height: 100vh;
     width: 9rem;
     left: 0;
+    justify-self: start;
 }
 .about, .projects, .contact{
     display: block;
@@ -69,7 +72,7 @@ section{
     box-sizing: border-box;
     border: 0.5rem #c3c3c3 solid;
     font-size: 1.7rem;
-    margin: 3rem 0 0 2vw;
+    position: absolute;
 }
 .aboutSection{
     background: url(img/background.jpg);
@@ -81,6 +84,7 @@ section{
     flex-direction: column;
     align-items: center;
     overflow: auto;
+    max-height: 100vh;
     padding: 1rem;
 }
 .windowTop{
@@ -166,6 +170,10 @@ section{
     text-align: left;
     line-height: 3rem;
 }
+.projectsSection{
+    width: 50%;
+    height: 50%;
+}
 .contactSection{
     height: fit-content;
 }
@@ -183,6 +191,7 @@ section{
 .phone, .email{
     padding: 0.5rem;
     margin: 0 0 0.3rem 0;
+    background: #c1c1c1;
 }
 .contactLiText{
     display: block;
@@ -204,11 +213,19 @@ section{
 .inputForm{
     width: 100%;
     height: 2.5rem;
+    border-top: 0.2rem #999999 solid;
+    border-left: 0.2rem #999999 solid;
+    border-right: 0.2rem #ededed solid;
+    border-left: 0.2rem #ededed solid;
 }
 .message{
     width: 100%;
     height: 10rem;
     resize: none;
+    border-top: 0.2rem #999999 solid;
+    border-left: 0.2rem #999999 solid;
+    border-right: 0.2rem #ededed solid;
+    border-left: 0.2rem #ededed solid;
 }
 label{
     margin: 0.5rem 0 0.5rem 0;
@@ -216,21 +233,33 @@ label{
 .submit{
     margin: 1rem 0 1rem 0;
     height: 3rem;
+    background: #c3c3c3;
 }
 @media only screen and (max-width: 1000px) {
+    .center{
+        align-items: center;
+    }
     nav{
         width: 6rem;
+        position: relative;
     }
     section{
         margin: 0 auto 0 auto;
+        position: relative;
     }
     .aboutSection{
-        height: 100%;
+        height: auto;
+        max-height: 100vh;
+        width: 100%;
     }
     .contactSection{
-        height: 100%;
+        height: auto;
+        max-height: 100vh;
         width: 100%;
-        overflow: hidden;
+    }
+    .projectsSection{
+        width: 100%;
+        height: 50%;
     }
     .title{
         width: 60%;
@@ -248,7 +277,6 @@ label{
         font-size: 1.3rem;
     }
 }
-
 .none{
       display: none;
 }

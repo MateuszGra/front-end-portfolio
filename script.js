@@ -19,20 +19,48 @@
 
     about.addEventListener("click", function(e) {  
         aboutSection.classList.remove('none');
-        projectsSection.classList.add('none');
-        contactSection.classList.add('none');
+        aboutSection.style.zIndex = 1;
+        projectsSection.style.zIndex = 0;
+        contactSection.style.zIndex = 0;
+        if(screen.width < 1000){
+            projectsSection.classList.add('none');
+            contactSection.classList.add('none');
+        }
     },false);
-
+    aboutSection.addEventListener("click", function(e) {  
+        aboutSection.style.zIndex = 1;
+        projectsSection.style.zIndex = 0;
+        contactSection.style.zIndex = 0;
+    },false);
     projects.addEventListener("click", function(e) {  
-        aboutSection.classList.add('none');
         projectsSection.classList.remove('none');
-        contactSection.classList.add('none');
+        aboutSection.style.zIndex = 0;
+        projectsSection.style.zIndex = 1;
+        contactSection.style.zIndex = 0;
+        if(screen.width < 1000){
+            aboutSection.classList.add('none');
+            contactSection.classList.add('none');
+        }
     },false);
-
+    projectsSection.addEventListener("click", function(e) {  
+        aboutSection.style.zIndex = 0;
+        projectsSection.style.zIndex = 1;
+        contactSection.style.zIndex = 0;
+    },false);
     contact.addEventListener("click", function(e) {  
-        aboutSection.classList.add('none');
-        projectsSection.classList.add('none');
         contactSection.classList.remove('none');
+        aboutSection.style.zIndex = 0;
+        projectsSection.style.zIndex = 0;
+        contactSection.style.zIndex = 1;
+        if(screen.width < 1000){
+            projectsSection.classList.add('none');
+            aboutSection.classList.add('none');
+        }
+    },false);
+    contactSection.addEventListener("click", function(e) {  
+        aboutSection.style.zIndex = 0;
+        projectsSection.style.zIndex = 0;
+        contactSection.style.zIndex = 1;
     },false);
 
     closeAbout.addEventListener("click", function(e) {  

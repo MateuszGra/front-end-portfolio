@@ -50,7 +50,34 @@
             <button id="closeContact" class="deleteButton"></button>
         </figure>
         <div class="overflow">
-            <img class="title" src="img/contact.png">
+            <div class="conection">
+                <div class="contactLi">
+                    <a>
+                        <button class="phone" href="tel:+48783058385">
+                            <img src="img/phone.png">
+                        </button>
+                    </a>
+                    <p class="contactLiText">783 058 385</p>
+                </div>
+                <div class="contactLi">
+                    <a href="mailto:mxgrabowski@gmail.com">
+                        <button class="email">
+                            <img src="img/email.png">
+                        </button>
+                    </a>
+                    <a class="contactLiText" href="mailto:mxgrabowski@gmail.com">mxgrabowski@gmail.com</a>
+                </div>
+            </div>
+            <form class="form" id="contact_form" novalidate>
+                <figure class="contactFormLabel">contact form</figure>
+                <label for="name" name2">Name</label>
+                <input class="inputForm" type=”text” name="name" id="name" data-error="Please provide your name">
+                <label for="email" email">E-mail</label>
+                <input class="inputForm" type="email" name="email" id="email" data-error="Please provide correct e-mail address">
+                <label for="message" message">Message</label>
+                <textarea class="message" name="message" id="message" class="textarea" data-error="Please enter message"></textarea>
+                <button class="submit">Submit</button>
+            </form>
         </div>
     </section>
     <script src="script.js"></script>

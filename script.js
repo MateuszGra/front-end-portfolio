@@ -12,6 +12,8 @@
     const closeProjects = document.getElementById('closeProjects');
     const closeContact = document.getElementById('closeContact');
 
+    const body = document.querySelector('body');
+
     const inputUrl = document.querySelector(".inputUrl");
     inputUrl.value = 'https://mateuszgra.github.io/front-end-portfolio/';
 
@@ -44,4 +46,10 @@
     closeContact.addEventListener("click", function(e) {  
         contactSection.classList.add('none');
     },false);
+
+    window.addEventListener("load", function(e) {  
+        const loader = document.querySelector('.loader');
+        body.removeChild(loader); 
+    },false);
+
 })();

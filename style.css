@@ -11,6 +11,22 @@ body{
     display: flex;
     flex-direction: row;
 }
+.loader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 999;
+    background: #008081;
+    animation: show 1s;
+}
+
+@keyframes show {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+  }
 nav{
     display: flex;
     flex-direction: column;

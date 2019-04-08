@@ -17,6 +17,8 @@
     const inputUrl = document.querySelector(".inputUrl");
     inputUrl.value = 'https://mateuszgra.github.io/front-end-portfolio/';
 
+    let width = window.innerWidth;
+
     about.addEventListener("click", function (e) {
         aboutSection.classList.remove('none');
         aboutSection.style.zIndex = 1;
@@ -81,7 +83,7 @@
     }, false);
 
     window.addEventListener("resize", function (e) {
-        if (window.innerWidth < 1000) {
+        if (window.innerWidth < 1000 && width != window.innerWidth) {
             aboutSection.classList.add('none');
             projectsSection.classList.add('none');
             contactSection.classList.add('none');

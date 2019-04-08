@@ -1,8 +1,10 @@
 @import url(reset.css);
-html{
+
+html {
     font-size: 62.5%;
 }
-body{
+
+body {
     background: #008081;
     font-family: 'Open Sans', sans-serif;
     height: 100vh;
@@ -11,14 +13,16 @@ body{
     display: flex;
     flex-direction: row;
 }
-.center{
+
+.center {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
     width: 100%;
 }
-.loader{
+
+.loader {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,10 +35,12 @@ body{
     color: white;
     font-size: 2rem;
 }
-.loaderImage{
+
+.loaderImage {
     margin: 0 0 1rem 0;
 }
-nav{
+
+nav {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,29 +49,36 @@ nav{
     left: 0;
     justify-self: start;
 }
-.about, .projects, .contact{
+
+.about,
+.projects,
+.contact {
     display: block;
     width: 5rem;
     height: 5rem;
     margin: 4rem 1rem 4rem 1rem;
     cursor: pointer;
 }
-.about{
+
+.about {
     background: url(img/computer.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
-.projects{
+
+.projects {
     background: url(img/folder.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
-.contact{
+
+.contact {
     background: url(img/email.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
-section{
+
+section {
     display: flex;
     flex-direction: column;
     background: #c3c3c3;
@@ -74,12 +87,14 @@ section{
     font-size: 1.7rem;
     position: absolute;
 }
-.aboutSection{
+
+.aboutSection {
     background: url(img/background.jpg);
     width: 90%;
     height: 90%;
 }
-.overflow{
+
+.overflow {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -87,7 +102,8 @@ section{
     max-height: 100vh;
     padding: 1rem;
 }
-.windowTop{
+
+.windowTop {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -97,7 +113,8 @@ section{
     border-bottom: 0.5rem #c3c3c3 solid;
     color: white;
 }
-.deleteButton{
+
+.deleteButton {
     right: 0.5rem;
     background: #bec0bb;
     border: none;
@@ -105,21 +122,26 @@ section{
     width: 2rem;
     cursor: pointer;
     margin: 0 0.5rem 0 0;
-  }
-.deleteButton:after, .deleteButton:before{
+}
+
+.deleteButton:after,
+.deleteButton:before {
     content: "";
     background: black;
     height: 1.8rem;
     width: 0.2rem;
     display: inline-block;
 }
-.deleteButton:after{
+
+.deleteButton:after {
     transform: rotate(50deg);
 }
-.deleteButton:before{
+
+.deleteButton:before {
     transform: rotate(-50deg);
 }
-.url{
+
+.url {
     display: flex;
     align-items: center;
     height: 4rem;
@@ -127,13 +149,15 @@ section{
     background: #c3c3c3;
     border-bottom: 0.2rem #c3c3c3 solid;
 }
-.inputUrl{
+
+.inputUrl {
     margin: 0 0 0 0.5%;
     height: 100%;
     width: 100%;
     border: none;
 }
-.urlDiv{
+
+.urlDiv {
     display: flex;
     align-items: center;
     width: 90%;
@@ -141,27 +165,33 @@ section{
     border: 0.1rem solid dimgray;
     background: white;
 }
-.urlIcon{
+
+.urlIcon {
     width: 2rem;
     height: 2rem;
     margin: 0 0 0 0.5%;
 }
-.adress{
+
+.adress {
     margin: 0 0 0 0.5%;
 }
-.titleTop{
+
+.titleTop {
     margin: 0 0 0 1rem;
 }
-.home{
+
+.home {
     width: 2.5rem;
-    height: 2.5rem;   
+    height: 2.5rem;
     margin: 0 0 0 0.5%;
 }
-.title{
+
+.title {
     width: 25%;
     margin: 1vh auto 0 auto;
 }
-.content{
+
+.content {
     display: block;
     width: 70%;
     color: red;
@@ -170,47 +200,57 @@ section{
     text-align: left;
     line-height: 3rem;
 }
-.projectsSection{
+
+.projectsSection {
     width: 50%;
     height: 50%;
 }
-.contactSection{
+
+.contactSection {
     height: fit-content;
 }
-.conection{
+
+.conection {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin: 0.5rem 0 2rem 0;
 }
-.contactLi{
+
+.contactLi {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-.phone, .email{
+
+.phone,
+.email {
     padding: 0.5rem;
     margin: 0 0 0.3rem 0;
     background: #c1c1c1;
 }
-.contactLiText{
+
+.contactLiText {
     display: block;
     margin: 0 0 0 0.5rem;
 }
-.form{
+
+.form {
     display: flex;
     flex-direction: column;
     border: 0.1rem black solid;
     width: 30rem;
     padding: 3rem 1.5rem 1.5rem 1.5rem;
 }
-.contactFormLabel{
+
+.contactFormLabel {
     margin: -4rem 0 1.5rem 0;
     background: #c3c3c3;
     text-align: center;
     width: 12rem;
 }
-.inputForm{
+
+.inputForm {
     width: 100%;
     height: 2.5rem;
     border-top: 0.2rem #999999 solid;
@@ -218,7 +258,8 @@ section{
     border-right: 0.2rem #ededed solid;
     border-left: 0.2rem #ededed solid;
 }
-.message{
+
+.message {
     width: 100%;
     height: 10rem;
     resize: none;
@@ -227,56 +268,69 @@ section{
     border-right: 0.2rem #ededed solid;
     border-left: 0.2rem #ededed solid;
 }
-label{
+
+label {
     margin: 0.5rem 0 0.5rem 0;
 }
-.submit{
+
+.submit {
     margin: 1rem 0 1rem 0;
     height: 3rem;
     background: #c3c3c3;
 }
+
 @media only screen and (max-width: 1000px) {
-    .center{
+    .center {
         align-items: center;
     }
-    nav{
+
+    nav {
         width: 6rem;
         position: relative;
     }
-    section{
+
+    section {
         margin: 0 auto 0 auto;
         position: relative;
     }
-    .aboutSection{
+
+    .aboutSection {
         height: auto;
         max-height: 100vh;
         width: 100%;
     }
-    .contactSection{
+
+    .contactSection {
         height: auto;
         max-height: 100vh;
         width: 100%;
     }
-    .projectsSection{
+
+    .projectsSection {
         width: 100%;
         height: 50%;
     }
-    .title{
+
+    .title {
         width: 60%;
     }
-    .content{
+
+    .content {
         font-size: 1.6rem;
         line-height: 2rem;
     }
-    .form{
+
+    .form {
         width: 100%;
     }
-  }
+}
+
 @media only screen and (max-width: 350px) {
-    .contactLiText{
+    .contactLiText {
         font-size: 1.3rem;
     }
 }
-.none{
-      display: none;
+
+.none {
+    display: none;
 }

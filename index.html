@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
 </head>
 
 <body>
@@ -43,24 +44,24 @@
                 <p class="titleTop">projects</p>
                 <button id="close" class="deleteButton"></button>
             </figure>
-            <div class="wrapperOne">
-                <h2 class="projectName">Random Dangeon</h2>
+            <div id="wrapper" class="wrapperOne">
+                <h2 class="dangeonName">Random Dangeon</h2>
                 <div class="flexRow">
-                    <div class="dangeonAnimation">
+                    <div class="animations">
                         <img class="zombieAnimation" src="img/dangeon_game/zombie_0.png">
                         <img class="knightAnimation" src="img/dangeon_game/knight_0.png">
                     </div>
                     <div class="aboutDangeon">
-                        <p>RPG/clicker game.</p>
+                        <p><span class="boild">RPG/clicker game.</span></p>
                         <ul>
-                            <p>What's radom in a random dungeon?</p>
+                            <p><span class="boild">What's radom in a random dungeon:</span></p>
                             <li>random dungeon appearance</li>
                             <li>treasure chests</li>
                             <li>16 opponents in random event's</li>
                             <li>16 weapons in shop</li>
-                            <li>saving game progress in localstorage</li>
+                            <li>saving game progress in local storage</li>
                         </ul>
-                        <div class="dangeonLinks">
+                        <div class="links">
                             <a href="https://mateuszgra.github.io/dungeon-game/" target="_blank">
                                 <button class="live">Live</button>
                             </a>
@@ -71,7 +72,44 @@
                     </div>
                 </div>
             </div>
-            </figure>
+            <div id="wrapper" class="wrapperTwo none">
+                <h2 class="clockName">Binary Clock</h2>
+                <div class="flexRow">
+                    <div class="animations">
+                        <img class="clockImg" src="img/binary_clock/binary_clock.jpg">
+                    </div>
+                    <div class="aboutClock">
+                        <p><span class="boild">Binary Clock</span></p>
+                        <ul>
+                            <li>change colors</li>
+                            <li>full weather report</li>
+                            <li>option to turn on the digital clock</li>
+                            <li>switched off modules</li>
+                            <li>storage of settings in local storage</li>
+                        </ul>
+                        <div class="links">
+                            <a href="https://mateuszgra.github.io/binary-clock/" target="_blank">
+                                <button class="live">Live</button>
+                            </a>
+                            <a href="https://github.com/MateuszGra/binary-clock" target="_blank">
+                                <button class="code">Code</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="wrapper" class="wrapperThree none">
+                <h2 class="moreName">More Projects:</h2>
+                <div class="flexRow">
+                    <div class="links">
+                        <a href="https://github.com/MateuszGra" target="_blank">
+                            <button class="githubLink">
+                                <img class="githubImg" src="img/github.svg">
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
             <div class="menuProjects">
                 <Button class="backProject">Back</Button>
                 <Button class="nextProject">Next</Button>

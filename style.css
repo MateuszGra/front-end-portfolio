@@ -127,7 +127,7 @@ section {
     height: 2rem;
     width: 2rem;
     cursor: pointer;
-    margin: 0 0.5rem 0 0;
+    margin: 0 0.2rem 0 0;
 }
 
 .deleteButton:after,
@@ -229,23 +229,53 @@ section {
     justify-content: center;
     align-items: center;
     height: 6rem;
+    width: 98%;
 }
 
-.projectName {
+.dangeonName,
+.clockName,
+.moreName {
     text-align: center;
     margin: 0 0 2rem 0;
-    font-family: 'VT323', monospace;
-    font-size: 5rem;
-    color: var(--dangeonColor);
 }
 
-.wrapperOne {
+.links {
+    display: flex;
+    justify-content: center;
+}
+
+.aboutDangeon,
+.aboutClock {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 4rem;
+}
+
+.dangeonName {
+    font-family: 'VT323', monospace;
+    color: var(--dangeonColor);
+    font-size: 5rem;
+}
+
+.clockName {
+    font-family: 'Play', sans-serif;
+    font-size: 4rem;
+}
+
+.clockImg {
+    margin: 0 0 1rem 0;
+}
+
+.wrapperOne,
+.wrapperTwo,
+.wrapperThree {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    height: fit-content;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     width: 98%;
+    min-height: 29.1rem;
     border-top: 0.2rem #ededed solid;
     border-left: 0.2rem #ededed solid;
     border-right: 0.2rem #999999 solid;
@@ -253,25 +283,43 @@ section {
     padding-bottom: 2rem;
 }
 
+.boild {
+    font-weight: 600;
+}
+
 .flexRow {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
+}
+
+.githubLink {
+    padding: 1rem;
+}
+
+.githubImg {
+    height: 7rem;
 }
 
 .live,
 .code {
     width: 10rem;
     height: 3rem;
-    margin: 2rem 0 1rem;
+    margin: 2rem 0 0 1rem;
 }
 
-.wrapperOne a {
+.wrapperOne a,
+.wrapperTwo a {
     text-decoration: none;
 }
 
 .contactSection {
     height: fit-content;
+}
+
+.aboutDangeon li,
+.aboutClock li {
+    margin: 0 0 0 2.2rem;
 }
 
 .conection {
@@ -342,7 +390,7 @@ label {
     background: #c3c3c3;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1025px) {
     .center {
         align-items: center;
         display: flex;
@@ -362,43 +410,41 @@ label {
         position: relative;
     }
 
-    .aboutSection {
-        height: auto;
-        max-height: 100vh;
-        width: 100%;
-    }
-
-    .contactSection {
-        height: auto;
-        max-height: 100vh;
-        width: 100%;
-    }
-
+    .aboutSection,
+    .contactSection,
     .projectsSection {
         height: auto;
+        max-height: 100vh;
+        width: 100%;
     }
 
-    .dangeonAnimation {
+    .wrapperOne,
+    .wrapperTwo,
+    .wrapperThree {
+        min-height: 36rem;
+    }
+
+    .animations {
         display: flex;
         justify-content: center;
     }
 
-    .aboutDangeon {
+    .aboutDangeon,
+    .aboutClock {
         margin: 0 0 0 2rem;
         font-size: 1.5rem;
     }
 
-    .dangeonLinks {
-        display: flex;
-        justify-content: center;
-    }
-
-    .aboutDangeon ul {
-        list-style: none;
-    }
-
-    .projectName {
+    .dangeonName {
         font-size: 4rem;
+    }
+
+    .clockName {
+        font-size: 3rem;
+    }
+
+    .moreName {
+        font-size: 2.5rem;
     }
 
     .backProject,
@@ -416,8 +462,13 @@ label {
         height: 10rem;
     }
 
+    .clockImg {
+        height: 11rem;
+    }
+
     .flexRow {
         flex-direction: column;
+        align-items: center;
     }
 
     .title {
@@ -439,7 +490,9 @@ label {
         font-size: 1.3rem;
     }
 
-    .wrapperOne {
+    .wrapperOne,
+    .wrapperTwo,
+    .wrapperThree {
         padding-bottom: 0.8rem;
         font-size: 1rem;
     }
@@ -453,8 +506,13 @@ label {
         height: 3rem;
     }
 
-    .dangeonAnimation {
+    .animations {
         margin: 0 0 0.3rem 0;
+    }
+
+    .aboutDangeon,
+    .aboutClock {
+        font-size: 1.2rem;
     }
 }
 

@@ -9,10 +9,19 @@
     --borderColor: #d6cecb;
     --windowActiveColor: #000083;
     --windowNotctiveColor: #8e8e90;
+    --buttonColor: #c0c0c0;
+
+    --dangeonColor: #750f1d;
 }
 
 html {
     font-size: 62.5%;
+}
+
+button {
+    background: var(--buttonColor);
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
 }
 
 body {
@@ -95,7 +104,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 3.7rem;
+    height: 3.2rem;
     width: 100%;
     background: var(--windowActiveColor);
     border-bottom: 0.5rem var(--windowColor) solid;
@@ -201,8 +210,64 @@ section {
 }
 
 .projectsSection {
-    width: 50%;
-    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75rem;
+    height: 42rem;
+}
+
+.backProject,
+.nextProject {
+    margin: 0 0 0 1.5rem;
+    width: 15rem;
+    height: 4rem;
+}
+
+.menuProjects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6rem;
+}
+
+.projectName {
+    text-align: center;
+    margin: 0 0 2rem 0;
+    font-family: 'VT323', monospace;
+    font-size: 5rem;
+    color: var(--dangeonColor);
+}
+
+.wrapperOne {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: fit-content;
+    overflow: auto;
+    width: 98%;
+    border-top: 0.2rem #ededed solid;
+    border-left: 0.2rem #ededed solid;
+    border-right: 0.2rem #999999 solid;
+    border-bottom: 0.2rem #999999 solid;
+    padding-bottom: 2rem;
+}
+
+.flexRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.live,
+.code {
+    width: 10rem;
+    height: 3rem;
+    margin: 2rem 0 1rem;
+}
+
+.wrapperOne a {
+    text-decoration: none;
 }
 
 .contactSection {
@@ -226,7 +291,6 @@ section {
 .email {
     padding: 0.5rem;
     margin: 0 0 0.3rem 0;
-    background: #c1c1c1;
 }
 
 .contactLiText {
@@ -265,7 +329,7 @@ section {
     border-top: 0.2rem #999999 solid;
     border-left: 0.2rem #999999 solid;
     border-right: 0.2rem #ededed solid;
-    border-left: 0.2rem #ededed solid;
+    border-bottom: 0.2rem #ededed solid;
 }
 
 label {
@@ -311,8 +375,49 @@ label {
     }
 
     .projectsSection {
-        width: 100%;
-        height: 50%;
+        height: auto;
+    }
+
+    .dangeonAnimation {
+        display: flex;
+        justify-content: center;
+    }
+
+    .aboutDangeon {
+        margin: 0 0 0 2rem;
+        font-size: 1.5rem;
+    }
+
+    .dangeonLinks {
+        display: flex;
+        justify-content: center;
+    }
+
+    .aboutDangeon ul {
+        list-style: none;
+    }
+
+    .projectName {
+        font-size: 4rem;
+    }
+
+    .backProject,
+    .nextProject {
+        width: 10rem;
+    }
+
+    .live,
+    .code {
+        margin: 1rem 1rem 0 0;
+    }
+
+    .zombieAnimation,
+    .knightAnimation {
+        height: 10rem;
+    }
+
+    .flexRow {
+        flex-direction: column;
     }
 
     .title {
@@ -329,9 +434,27 @@ label {
     }
 }
 
-@media only screen and (max-width: 350px) {
+@media (max-width: 350px) {
     .contactLiText {
         font-size: 1.3rem;
+    }
+
+    .wrapperOne {
+        padding-bottom: 0.8rem;
+        font-size: 1rem;
+    }
+
+    .menuProjects {
+        height: 4rem;
+    }
+
+    .nextProject,
+    .backProject {
+        height: 3rem;
+    }
+
+    .dangeonAnimation {
+        margin: 0 0 0.3rem 0;
     }
 }
 

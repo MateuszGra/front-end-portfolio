@@ -7,6 +7,7 @@
     <title>Front-End Protfolio</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
 </head>
 
 <body>
@@ -33,7 +34,8 @@
             </figure>
             <div class="overflow">
                 <img class="title" src="img/aboutme.png">
-                <article class="content"></article>
+                <article class="content">
+                </article>
             </div>
         </section>
         <section class="projectsSection none">
@@ -41,7 +43,38 @@
                 <p class="titleTop">projects</p>
                 <button id="close" class="deleteButton"></button>
             </figure>
-            <div class="overflow">
+            <div class="wrapperOne">
+                <h2 class="projectName">Random Dangeon</h2>
+                <div class="flexRow">
+                    <div class="dangeonAnimation">
+                        <img class="zombieAnimation" src="img/dangeon_game/zombie_0.png">
+                        <img class="knightAnimation" src="img/dangeon_game/knight_0.png">
+                    </div>
+                    <div class="aboutDangeon">
+                        <p>RPG/clicker game.</p>
+                        <ul>
+                            <p>What's radom in a random dungeon?</p>
+                            <li>random dungeon appearance</li>
+                            <li>treasure chests</li>
+                            <li>16 opponents in random event's</li>
+                            <li>16 weapons in shop</li>
+                            <li>saving game progress in localstorage</li>
+                        </ul>
+                        <div class="dangeonLinks">
+                            <a href="https://mateuszgra.github.io/dungeon-game/" target="_blank">
+                                <button class="live">Live</button>
+                            </a>
+                            <a href="https://github.com/MateuszGra/dungeon-game" target="_blank">
+                                <button class="code">Code</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </figure>
+            <div class="menuProjects">
+                <Button class="backProject">Back</Button>
+                <Button class="nextProject">Next</Button>
             </div>
         </section>
         <section class="contactSection none">
@@ -70,12 +103,12 @@
                 </div>
                 <form class="form" id="contact_form" novalidate>
                     <figure class="contactFormLabel">contact form</figure>
-                    <label for="name" name2">Name</label>
+                    <label for="name">Name</label>
                     <input class="inputForm" type=”text” name="name" id="name" data-error="Please provide your name">
-                    <label for="email" email">E-mail</label>
+                    <label for="email">E-mail</label>
                     <input class="inputForm" type="email" name="email" id="email"
                         data-error="Please provide correct e-mail address">
-                    <label for="message" message">Message</label>
+                    <label for="message">Message</label>
                     <textarea class="message" name="message" id="message" class="textarea"
                         data-error="Please enter message"></textarea>
                     <button class="submit">Submit</button>
@@ -85,6 +118,7 @@
     </div>
     <script src="script/main.js"></script>
     <script src="script/move_windows.js"></script>
+    <script src="script/animations.js"></script>
 </body>
 
 </html>

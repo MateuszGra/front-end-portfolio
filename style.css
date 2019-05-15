@@ -1,11 +1,22 @@
-@import url(reset.css);
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --backgroundColor: #008081;
+    --windowColor: #c3c3c3;
+    --borderColor: #d6cecb;
+    --windowActiveColor: #000083;
+    --windowNotctiveColor: #8e8e90;
+}
 
 html {
     font-size: 62.5%;
 }
 
 body {
-    background: #008081;
+    background: var(--backgroundColor);
     font-family: 'Open Sans', sans-serif;
     height: 100vh;
     width: 100vw;
@@ -20,24 +31,6 @@ body {
     justify-content: center;
     height: 100%;
     width: 100%;
-}
-
-.loader {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    z-index: 999;
-    background: #008081;
-    color: white;
-    font-size: 2rem;
-}
-
-.loaderImage {
-    margin: 0 0 1rem 0;
 }
 
 nav {
@@ -79,11 +72,12 @@ nav {
 }
 
 section {
+    position: relative;
     display: flex;
     flex-direction: column;
-    background: #c3c3c3;
+    background: var(--windowColor);
     box-sizing: border-box;
-    border: 0.5rem #c3c3c3 solid;
+    border: 0.4rem var(--borderColor) solid;
     font-size: 1.7rem;
     position: absolute;
 }
@@ -109,12 +103,20 @@ section {
     justify-content: space-between;
     height: 3.7rem;
     width: 100%;
-    background: #000083;
-    border-bottom: 0.5rem #c3c3c3 solid;
+    background: var(--windowActiveColor);
+    border-bottom: 0.5rem var(--windowColor) solid;
     color: white;
 }
 
+.notActive {
+    background: var(--windowNotctiveColor);
+}
+
 .deleteButton {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     right: 0.5rem;
     background: #bec0bb;
     border: none;
@@ -126,19 +128,19 @@ section {
 
 .deleteButton:after,
 .deleteButton:before {
-    content: "";
+    position: absolute;
+    content: '';
     background: black;
-    height: 1.8rem;
-    width: 0.2rem;
-    display: inline-block;
+    height: 1.6rem;
+    width: 0.1rem;
 }
 
 .deleteButton:after {
-    transform: rotate(50deg);
+    transform: rotate(45deg);
 }
 
 .deleteButton:before {
-    transform: rotate(-50deg);
+    transform: rotate(-45deg);
 }
 
 .url {
@@ -178,6 +180,7 @@ section {
 
 .titleTop {
     margin: 0 0 0 1rem;
+    user-select: none;
 }
 
 .home {
@@ -195,10 +198,20 @@ section {
     display: block;
     width: 70%;
     color: red;
-    font-size: 2.5rem;
+    font-size: 3rem;
+    font-weight: 500;
     margin: 5vh auto 5vh auto;
     text-align: left;
     line-height: 3rem;
+}
+
+.sprite {
+    background: url(img/spirte2.png);
+    position: absolute;
+    bottom: 0;
+    transform: scale(3);
+    width: 10rem;
+    height: 10rem;
 }
 
 .projectsSection {
@@ -321,7 +334,7 @@ label {
     }
 
     .form {
-        width: 100%;
+        width: 90%;
     }
 }
 

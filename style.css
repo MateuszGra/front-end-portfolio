@@ -25,15 +25,8 @@ body {
     flex-direction: row;
 }
 
-.center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-}
-
 nav {
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -72,18 +65,19 @@ nav {
 }
 
 section {
-    position: relative;
+    position: absolute;
     display: flex;
     flex-direction: column;
     background: var(--windowColor);
     box-sizing: border-box;
     border: 0.4rem var(--borderColor) solid;
     font-size: 1.7rem;
-    position: absolute;
 }
 
 .aboutSection {
     background: url(img/background.jpg);
+    background-position: center;
+    background-size: cover;
     width: 90%;
     height: 90%;
 }
@@ -106,6 +100,7 @@ section {
     background: var(--windowActiveColor);
     border-bottom: 0.5rem var(--windowColor) solid;
     color: white;
+    cursor: pointer;
 }
 
 .notActive {
@@ -205,15 +200,6 @@ section {
     line-height: 3rem;
 }
 
-.sprite {
-    background: url(img/spirte2.png);
-    position: absolute;
-    bottom: 0;
-    transform: scale(3);
-    width: 10rem;
-    height: 10rem;
-}
-
 .projectsSection {
     width: 50%;
     height: 50%;
@@ -295,9 +281,14 @@ label {
 @media only screen and (max-width: 1000px) {
     .center {
         align-items: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: calc(100% - 6rem);
     }
 
     nav {
+        position: unset;
         width: 6rem;
         position: relative;
     }

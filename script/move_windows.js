@@ -11,9 +11,7 @@
         }
 
         draggedEl = this;
-
         boundingClientRect = draggedEl.getBoundingClientRect();
-
         grabPointY = boundingClientRect.top - ev.clientY;
         grabPointX = boundingClientRect.left - ev.clientX;
     };
@@ -29,7 +27,6 @@
         if (posX < 0) {
             posX = 0;
         }
-
         if (posY < 0) {
             posY = 0;
         }

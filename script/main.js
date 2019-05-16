@@ -56,9 +56,10 @@
 
     //resize - change full screen to mobile version
     window.addEventListener("resize", (e) => {
-        if (window.innerWidth < 1000 && width != window.innerWidth) {
+        if (window.innerWidth < 1025 && width != window.innerWidth) {
             for (let i = 0; i < section.length; i++) {
                 section[i].classList.add('none');
+                section[i].style.transform = "translateX(" + 0 + "px) translateY(" + 0 + "px)";
             }
         }
     }, false);

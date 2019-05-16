@@ -437,7 +437,8 @@ label {
     .wrapperOne,
     .wrapperTwo,
     .wrapperThree {
-        min-height: 37rem;
+        min-height: 38.9rem;
+        padding-bottom: 1rem;
     }
 
     .animations {
@@ -479,7 +480,7 @@ label {
     }
 
     .clockImg {
-        height: 11rem;
+        height: 13.5rem;
     }
 
     .flexRow {

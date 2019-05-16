@@ -446,6 +446,10 @@ label {
         justify-content: center;
     }
 
+    .wrapperTwo .animations {
+        margin: 0 0 0 0;
+    }
+
     .aboutDangeon,
     .aboutClock {
         margin: 1rem 0 0 2rem;
@@ -471,7 +475,7 @@ label {
 
     .live,
     .code {
-        margin: 1rem 1.5rem 2rem 0;
+        margin: 1rem 1.5rem 1rem 0;
     }
 
     .zombieAnimation,

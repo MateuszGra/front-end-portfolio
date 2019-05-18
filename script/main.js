@@ -8,10 +8,26 @@
     const nextProject = document.querySelector('.nextProject');
     const wrapper = document.querySelectorAll('#wrapper');
 
-    const inputUrl = document.querySelector(".inputUrl");
+    const inputUrl = document.querySelector('.inputUrl');
     inputUrl.value = 'https://mateuszgra.github.io/front-end-portfolio/';
 
+    const loader = document.querySelector('.loader');
+    const loadingLineThree = document.querySelector('.loadingLineThree');
     let width = window.innerWidth;
+
+    //loader
+    window.addEventListener('load', (e) => {
+        loadingLineThree.classList.remove('opacity');
+        loader.addEventListener('click', (e) => {
+            loader.classList.add('none');
+        }, false);
+        loader.addEventListener('touch', (e) => {
+            loader.classList.add('none');
+        }, false);
+        window.addEventListener('keyup', (e) => {
+            loader.classList.add('none');
+        }, false);
+    }, false);
 
     //click on icon or section
     iconClick = n => {
